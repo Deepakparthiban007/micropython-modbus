@@ -314,7 +314,7 @@ class Serial(CommonModbusFunctions):
         return self._validate_resp_hdr(response=self._uart_read(),
                                        slave_addr=slave_addr,
                                        function_code=modbus_pdu[0],
-                                       count=count)
+                                       count=False)
 
     def _validate_resp_hdr(self,
                            response: bytearray,
